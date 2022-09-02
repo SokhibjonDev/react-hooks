@@ -6,12 +6,13 @@ function App() {
   const inputRef = useRef(null);
   const prevValue = useRef("");
 
+
   useEffect(() => {
     renderCount.current++;
   });
 
   useEffect(() => {
-    prevValue.current = value ;
+    prevValue.current = value;
   }, [value]);
 
   const focus = () => inputRef.current.focus();
@@ -25,7 +26,7 @@ function App() {
         onChange={(e) => setValue(e.target.value)}
         value={value}
       />
-      <button onClick={focus}>Focus</button>
+      <button onClick={focus}>Focus</ button>
     </div>
   );
 }
